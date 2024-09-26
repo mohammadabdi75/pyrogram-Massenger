@@ -3,6 +3,7 @@ from pyrogram import Client
 import os
 from faker import Faker
 
+# Codes for API_ID and CHANNEL should be without " "
 API_ID= "Your API_ID"
 API_HASH= "Your API_HASH"
 TOKEN= "Your TOKEN"

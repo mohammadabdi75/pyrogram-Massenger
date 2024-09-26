@@ -1,0 +1,7 @@
+python-telegram-bot==21.6
+Pyrogram==2.0.106
+Faker==29.0.0
+anyio==3.5.0
+async-generator==1.10
+async-lru==1.0.1
+async-timeout==4.0.3
