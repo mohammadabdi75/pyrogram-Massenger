@@ -48,3 +48,5 @@ to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
+## ❤️ Special Thanks
+Special thanks to [AmirSbss](https://github.com/AmirSbss) for help in this project.

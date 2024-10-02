@@ -1,5 +1,6 @@
 import asyncio
-from pyrogram import Client
+from pyrogram import Client, filters
+from telegram import Bot
 import os
 from faker import Faker
 
@@ -16,11 +17,14 @@ async def main():
             async with Client("sessions/" + s.replace(".session", "")) as client:
                 su = False
                 while not su:
-                    USERNAME = fake.user_name()
+                    # Change FAVORITE_NAME to you special name
+                    USERNAME = "FAVORITE_NAME"+fake.user_name()
                     print("Setting username", USERNAME, "for", s)
                     try:
                         await client.set_username(USERNAME)
                         su = True
+                        text = f"Username is set for\nt.me/{s.replace('.session', '')}\nUsername is: @{USERNAME}"
+                        await Bot(TOKEN).send_message(CHANNEL, text)
                     except Exception as e:
                         print(e)
                         await asyncio.sleep(5)
